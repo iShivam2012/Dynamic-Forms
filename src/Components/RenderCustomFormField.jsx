@@ -1,4 +1,11 @@
-const RenderCustomFormField = ({ fields, getFieldProps, errors, values }) => {
+const RenderCustomFormField = ({
+  fields,
+  getFieldProps,
+  errors,
+  values,
+  touched,
+}) => {
+  console.log(touched);
   const customFormField = ({
     type,
     name,
@@ -16,6 +23,9 @@ const RenderCustomFormField = ({ fields, getFieldProps, errors, values }) => {
               return <option value={option.value}>{option.label}</option>;
             })}
           </select>
+          {touched[name] && errors[name] ? (
+            <div style={{ color: "red" }}>{errors[name]}</div>
+          ) : null}
           {values[name] === options[1].value &&
             children &&
             children.map((form) =>
@@ -36,6 +46,9 @@ const RenderCustomFormField = ({ fields, getFieldProps, errors, values }) => {
             id={name}
             placeholder={placeholder}
           ></textarea>
+          {touched[name] && errors[name] ? (
+            <div style={{ color: "red" }}>{errors[name]}</div>
+          ) : null}
         </>
       );
     }
@@ -57,6 +70,9 @@ const RenderCustomFormField = ({ fields, getFieldProps, errors, values }) => {
               </>
             );
           })}
+          {touched[name] && errors[name] ? (
+            <div style={{ color: "red" }}>{errors[name]}</div>
+          ) : null}
           {values[name] === options[1].value &&
             children &&
             children.map((form) =>
@@ -75,6 +91,9 @@ const RenderCustomFormField = ({ fields, getFieldProps, errors, values }) => {
             id={name}
             placeholder={placeholder}
           />
+          {touched[name] && errors[name] ? (
+            <div style={{ color: "red" }}>{errors[name]}</div>
+          ) : null}
           {type === "checkbox" &&
             values[name] &&
             children &&

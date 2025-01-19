@@ -1,5 +1,7 @@
 import { useFormik } from "formik";
 import RenderCustomFormField from "./RenderCustomFormField";
+import { dynamicFormValidation } from "../ValidationSchema/schema";
+import * as Yup from "yup";
 
 const DynamicForms = ({ data }) => {
   const gettingInitialValues = (data, initialValues = {}) => {
@@ -13,32 +15,33 @@ const DynamicForms = ({ data }) => {
     });
     return initialValues;
   };
-  const { getFieldProps, errors, values, handleSubmit } = useFormik({
+  const obj = dynamicFormValidation(data);
+  const { getFieldProps, errors, values, handleSubmit, touched } = useFormik({
     initialValues: gettingInitialValues(data),
     onSubmit: (values) => {
       console.log(values);
     },
+    validationSchema: Yup.object(obj),
   });
 
   return (
-    <>
+    <form onSubmit={handleSubmit}>
       {data.map((form) => {
         return (
           <div id={form.sectionTitle}>
             <h2>{form.sectionTitle}</h2>
-            <form onSubmit={handleSubmit}>
-              <RenderCustomFormField
-                fields={form.fields}
-                getFieldProps={getFieldProps}
-                errors={errors}
-                values={values}
-              />
-              <button type="submit">Submit</button>
-            </form>
+            <RenderCustomFormField
+              fields={form.fields}
+              getFieldProps={getFieldProps}
+              errors={errors}
+              values={values}
+              touched={touched}
+            />
           </div>
         );
       })}
-    </>
+      <button type="submit">Submit</button>
+    </form>
   );
 };
 
