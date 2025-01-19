@@ -15,4 +15,5 @@ RUN chown -R nonroot:nonroot /home/nonroot
 USER 10001
 
 RUN npm run build
-CMD ["serve","-s","/base/build","-l","5000"]
+
+CMD ["npx", "serve", "-s","/base/build","-l","8080"]
