@@ -1,10 +1,14 @@
-FROM node
-RUN groupadd -r appgroup && useradd -r -m -g appgroup appuser
+FROM node:16
+
+RUN groupadd -r appgroup && \
+    useradd -r -m -g appgroup -u 15000 appuser
+
 WORKDIR /app
 
 COPY package*.json ./
 
 RUN npm install
+
 COPY . .
 
 RUN chown -R appuser:appgroup /app
