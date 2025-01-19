@@ -1,20 +1,17 @@
-FROM node:16
+FROM node:latest
 
-RUN groupadd -r appgroup && \
-    useradd -r -m -g appgroup -u 15000 nonrootuser
+RUN useradd -u 10001 nonroot
 
+RUN mkdir /app
 WORKDIR /app
 
 COPY package*.json ./
-
 RUN npm install
 
 COPY . .
 
-RUN chown -R appuser:appgroup /app
+RUN chown -R nonroot:nonroot /app
 
-USER nonrootuser
-
-EXPOSE 3000
+USER 10001
 
 CMD ["npm", "run", "dev"]
