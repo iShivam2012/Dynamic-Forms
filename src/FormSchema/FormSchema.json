@@ -1,0 +1,108 @@
+[
+  {
+    "sectionTitle": "User Details",
+    "fields": [
+      {
+        "name": "name",
+        "label": "Name",
+        "type": "text",
+        "required": true,
+        "placeholder": "Enter your name"
+      },
+      {
+        "name": "email",
+        "label": "Email ID",
+        "type": "email",
+        "required": true,
+        "placeholder": "Enter your email"
+      },
+      {
+        "name": "password",
+        "label": "Password",
+        "type": "password",
+        "required": true,
+        "placeholder": "Enter your password"
+      },
+      {
+        "name": "dob",
+        "label": "Date of Birth",
+        "type": "date",
+        "required": false
+      },
+      {
+        "name": "gender",
+        "label": "Choose your Gender",
+        "type": "radio",
+        "options": [
+          { "label": "Male", "name":"gender", "value": "male" },
+          { "label": "Female", "name":"gender", "value": "female" },
+          { "label": "Other", "name":"gender", "value": "other" }
+        ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "sectionTitle": "More Info",
+    "fields": [
+      {
+        "name": "color",
+        "label": "Choose Color",
+        "type": "color",
+        "required": false
+      },
+      {
+        "name": "experienceLevel",
+        "label": "Experience Level",
+        "type": "range",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "required": false
+      },
+      {
+        "name": "profession",
+        "label": "Profession",
+        "type": "select",
+        "options": [
+          { "label": "Frontend Dev", "value": "frontend" },
+          { "label": "Backend Dev", "value": "backend" },
+          { "label": "Full Stack Dev", "value": "fullstack" },
+          { "label": "Data Science Eng", "value": "datascience" }
+        ],
+        "required": true
+      }
+    ]
+  },
+  {
+    "sectionTitle": "Feedback Form",
+    "fields": [
+      {
+        "name": "comments",
+        "label": "Your Feedback",
+        "type": "textarea",
+        "required": false,
+        "placeholder": "Share your Comments"
+      },
+      {
+        "name": "termsAgreement",
+        "label": "Agree to Terms",
+        "type": "checkbox",
+        "required": true
+      },
+      {
+        "name": "fileUpload",
+        "label": "Upload File",
+        "type": "file",
+        "required": false
+      },
+      {
+        "name": "search",
+        "label": "Search",
+        "type": "search",
+        "required": false,
+        "placeholder": "Search here..."
+      }
+    ]
+  }
+]
