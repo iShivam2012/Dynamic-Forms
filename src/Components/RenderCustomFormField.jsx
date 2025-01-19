@@ -1,6 +1,6 @@
-const RenderCustomFormField = ({fields, getFieldProps, errors}) =>{
+const RenderCustomFormField = ({fields, getFieldProps, errors, values}) =>{
     
-    const customFormField = ({type, name, label, placeholder, options}) =>{
+    const customFormField = ({type, name, label, placeholder, options, children}) =>{
         if(type === 'select'){
             return <>
             <label htmlFor={name} >{label}</label> 
@@ -8,7 +8,8 @@ const RenderCustomFormField = ({fields, getFieldProps, errors}) =>{
                 {options.map(option =>{
                     return <option value={option.value}>{option.label}</option>
                 })}
-            </select>;
+            </select>
+            {values[name]=== options[1].value && children && children.map((form)=> form.fields.map((field)=>customFormField(field))) }
             </>
         }
         if(type === 'textarea'){

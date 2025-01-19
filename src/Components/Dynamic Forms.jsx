@@ -15,7 +15,7 @@ const DynamicForms = ({data}) =>{
         })
         return initialValues
     }
-    const {getFieldProps, errors, handleSubmit} = useFormik({
+    const {getFieldProps, errors, values, handleSubmit} = useFormik({
         initialValues: gettingInitialValues(data),
         onSubmit: (values)=>{
             console.log(values)
@@ -29,7 +29,7 @@ const DynamicForms = ({data}) =>{
                 <div id={form.sectionTitle}>
                 <h2>{form.sectionTitle}</h2>
                 <form onSubmit={handleSubmit}>
-                    <RenderCustomFormField fields={form.fields} getFieldProps={getFieldProps} errors={errors} />
+                    <RenderCustomFormField fields={form.fields} getFieldProps={getFieldProps} errors={errors} values={values} />
                     <button type="submit">Submit</button>
                 </form>
                 </div>
