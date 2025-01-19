@@ -1,7 +1,7 @@
 FROM node:16
 
 RUN groupadd -r appgroup && \
-    useradd -r -m -g appgroup -u 15000 appuser
+    useradd -r -m -g appgroup -u 15000 nonrootuser
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ COPY . .
 
 RUN chown -R appuser:appgroup /app
 
-USER appuser
+USER nonrootuser
 
 EXPOSE 3000
 
