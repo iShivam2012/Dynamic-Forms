@@ -1,8 +1,10 @@
 [
   {
+    "id": 45,
     "sectionTitle": "User Details",
     "fields": [
       {
+        "id": 1,
         "name": "name",
         "label": "Name",
         "type": "text",
@@ -10,6 +12,7 @@
         "placeholder": "Enter your name"
       },
       {
+        "id": 2,
         "name": "email",
         "label": "Email ID",
         "type": "email",
@@ -17,6 +20,7 @@
         "placeholder": "Enter your email"
       },
       {
+        "id": 3,
         "name": "password",
         "label": "Password",
         "type": "password",
@@ -24,34 +28,39 @@
         "placeholder": "Enter your password"
       },
       {
+        "id": 4,
         "name": "dob",
         "label": "Date of Birth",
         "type": "date",
         "required": false
       },
       {
+        "id": 5,
         "name": "gender",
         "label": "Choose your Gender",
         "type": "radio",
         "options": [
-          { "label": "Male", "name": "gender", "value": "male" },
-          { "label": "Female", "name": "gender", "value": "female" },
-          { "label": "Other", "name": "gender", "value": "other" }
+          { "id": 6, "label": "Male", "name": "gender", "value": "male" },
+          { "id": 7, "label": "Female", "name": "gender", "value": "female" },
+          { "id": 8, "label": "Other", "name": "gender", "value": "other" }
         ],
         "required": true
       }
     ]
   },
   {
+    "id": 46,
     "sectionTitle": "More Info",
     "fields": [
       {
+        "id": 9,
         "name": "color",
         "label": "Choose Color",
         "type": "color",
         "required": false
       },
       {
+        "id": 10,
         "name": "experienceLevel",
         "label": "Experience Level",
         "type": "range",
@@ -61,23 +70,26 @@
         "required": false
       },
       {
+        "id": 11,
         "name": "profession",
         "label": "Profession",
         "type": "select",
         "options": [
-          { "label": "Frontend Dev", "value": "frontend" },
-          { "label": "Backend Dev", "value": "backend" },
-          { "label": "Full Stack Dev", "value": "fullstack" },
-          { "label": "Data Science Eng", "value": "datascience" }
+          { "id": 12, "label": "Frontend Dev", "value": "frontend" },
+          { "id": 13, "label": "Backend Dev", "value": "backend" },
+          { "id": 14, "label": "Full Stack Dev", "value": "fullstack" },
+          { "id": 15, "label": "Data Science Eng", "value": "datascience" }
         ],
         "required": true
       }
     ]
   },
   {
+    "id": 47,
     "sectionTitle": "Feedback Form",
     "fields": [
       {
+        "id": 16,
         "name": "comments",
         "label": "Your Feedback",
         "type": "textarea",
@@ -85,18 +97,21 @@
         "placeholder": "Share your Comments"
       },
       {
+        "id": 17,
         "name": "termsAgreement",
         "label": "Agree to Terms",
         "type": "checkbox",
         "required": true
       },
       {
+        "id": 18,
         "name": "fileUpload",
         "label": "Upload File",
         "type": "file",
         "required": false
       },
       {
+        "id": 19,
         "name": "search",
         "label": "Search",
         "type": "search",
@@ -106,41 +121,45 @@
     ]
   },
   {
+    "id":48,
     "sectionTitle": "Nested Children Form",
     "fields": [
       {
+        "id": 20,
         "name": "que",
         "label": "Would you like to share your professional details?",
         "type": "select",
         "options": [
-          { "label": "", "value": "" },
-          { "label": "Yes", "value": "Yes" },
-          { "label": "No", "value": "No" }
+          { "id": 21, "label": "", "value": "" },
+          { "id": 22, "label": "Yes", "value": "Yes" },
+          { "id": 23, "label": "No", "value": "No" }
         ],
         "required": true,
         "children": [
           {
             "fields": [
               {
+                "id": 24,
                 "name": "que1",
                 "label": "How many years of experience do you have in software engineering?",
                 "required": true,
                 "options": [
-                  { "label": 1, "value": 1 },
-                  { "label": 2, "value": 2 },
-                  { "label": 3, "value": 3 },
-                  { "label": 4, "value": 4 },
-                  { "label": 5, "value": 5 },
-                  { "label": 6, "value": 6 },
-                  { "label": 7, "value": 7 },
-                  { "label": 8, "value": 8 },
-                  { "label": 9, "value": 9 },
-                  { "label": 10, "value": 10 },
-                  { "label": 11, "value": "10+" }
+                  { "id": 25, "label": 1, "value": 1 },
+                  { "id": 26,"label": 2, "value": 2 },
+                  { "id": 27, "label": 3, "value": 3 },
+                  { "id": 28, "label": 4, "value": 4 },
+                  { "id": 29, "label": 5, "value": 5 },
+                  { "id": 30, "label": 6, "value": 6 },
+                  { "id": 31, "label": 7, "value": 7 },
+                  { "id": 32, "label": 8, "value": 8 },
+                  { "id": 33, "label": 9, "value": 9 },
+                  { "id": 34, "label": 10, "value": 10 },
+                  { "id": 35, "label": 11, "value": "10+" }
                 ],
                 "type": "select"
               },
               {
+                "id": 36,
                 "type": "text",
                 "required": true,
                 "name": "que3",
@@ -151,18 +170,20 @@
         ]
       },
       {
+        "id": 37,
         "name": "signedup",
         "label": "Already Signedup?",
         "type": "radio",
         "options": [
-          { "label": "Yes", "name": "signedup", "value": "yes" },
-          { "label": "No", "name": "signedup", "value": "no" }
+          { "id": 38, "label": "Yes", "name": "signedup", "value": "yes" },
+          { "id": 39, "label": "No", "name": "signedup", "value": "no" }
         ],
         "required": true,
         "children": [
           {
             "fields": [
               {
+                "id": 40,
                 "name": "fname",
                 "label": "Full Name",
                 "type": "text",
@@ -170,6 +191,7 @@
                 "placeholder": "Enter your Full Name"
               },
               {
+                "id": 41,
                 "name": "emailId",
                 "label": "Email Address",
                 "type": "email",
@@ -177,6 +199,7 @@
                 "placeholder": "Enter your email id"
               },
               {
+                "id": 42,
                 "name": "pass",
                 "label": "Password",
                 "type": "password",
@@ -188,6 +211,7 @@
         ]
       },
       {
+        "id": 43,
         "name": "sign",
         "label": "Sign below",
         "type": "checkbox",
@@ -196,6 +220,7 @@
           {
             "fields": [
               {
+                "id": 44,
                 "name": "nick name",
                 "label": "Nick Name",
                 "type": "text",

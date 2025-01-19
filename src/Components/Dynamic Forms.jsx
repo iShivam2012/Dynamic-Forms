@@ -25,11 +25,11 @@ const DynamicForms = ({ data }) => {
   });
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="container" onSubmit={handleSubmit}>
       {data.map((form) => {
         return (
-          <div id={form.sectionTitle}>
-            <h2>{form.sectionTitle}</h2>
+          <div key={form.id} id={form.id} className="pod">
+            <h2 className="form-title">{form.sectionTitle}</h2>
             <RenderCustomFormField
               fields={form.fields}
               getFieldProps={getFieldProps}
