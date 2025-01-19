@@ -1,3 +1,4 @@
+import RenderCustomField from "./RenderCustomField";
 
 const DynamicForms = ({data}) =>{
 
@@ -8,6 +9,7 @@ const DynamicForms = ({data}) =>{
                 <div id={form.sectionTitle}>
                 <h2>{form.sectionTitle}</h2>
                 <form>
+                    <RenderCustomField fields={form.fields} />
                 </form>
                 </div>
             )
