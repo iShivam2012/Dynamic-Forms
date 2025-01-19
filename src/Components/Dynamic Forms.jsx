@@ -20,6 +20,7 @@ const DynamicForms = ({ data }) => {
     initialValues: gettingInitialValues(data),
     onSubmit: (values) => {
       console.log(values);
+      alert(JSON.stringify(values,null,2))
     },
     validationSchema: Yup.object(obj),
   });

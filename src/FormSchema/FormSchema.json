@@ -74,7 +74,9 @@
         "name": "profession",
         "label": "Profession",
         "type": "select",
+        "placeholder":"Enter your Profession Details",
         "options": [
+          { "id": 50, "label": "Select your Profession", "value": "" },
           { "id": 12, "label": "Frontend Dev", "value": "frontend" },
           { "id": 13, "label": "Backend Dev", "value": "backend" },
           { "id": 14, "label": "Full Stack Dev", "value": "fullstack" },
@@ -130,7 +132,7 @@
         "label": "Would you like to share your professional details?",
         "type": "select",
         "options": [
-          { "id": 21, "label": "", "value": "" },
+          { "id": 21, "label": "Select a value", "value": "" },
           { "id": 22, "label": "Yes", "value": "Yes" },
           { "id": 23, "label": "No", "value": "No" }
         ],
@@ -142,7 +144,7 @@
                 "id": 24,
                 "name": "que1",
                 "label": "How many years of experience do you have in software engineering?",
-                "required": true,
+                "required": false,
                 "options": [
                   { "id": 25, "label": 1, "value": 1 },
                   { "id": 26,"label": 2, "value": 2 },
@@ -161,7 +163,7 @@
               {
                 "id": 36,
                 "type": "text",
-                "required": true,
+                "required": false,
                 "name": "que3",
                 "label": "What is your profession?"
               }
@@ -187,7 +189,7 @@
                 "name": "fname",
                 "label": "Full Name",
                 "type": "text",
-                "required": true,
+                "required": false,
                 "placeholder": "Enter your Full Name"
               },
               {
@@ -195,7 +197,7 @@
                 "name": "emailId",
                 "label": "Email Address",
                 "type": "email",
-                "required": true,
+                "required": false,
                 "placeholder": "Enter your email id"
               },
               {
@@ -203,7 +205,7 @@
                 "name": "pass",
                 "label": "Password",
                 "type": "password",
-                "required": true,
+                "required": false,
                 "placeholder": "Enter your password"
               }
             ]
@@ -224,7 +226,7 @@
                 "name": "nick name",
                 "label": "Nick Name",
                 "type": "text",
-                "required": true,
+                "required": false,
                 "placeholder": "Enter your Nick name"
               }
             ]
