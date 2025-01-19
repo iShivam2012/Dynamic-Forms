@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import dataJson from './FormSchema/FormSchema.json'
+import DynamicForms from './Components/Dynamic Forms';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Dynamic Forms</h1>
+      <DynamicForms data={dataJson} />
     </>
   )
 }
