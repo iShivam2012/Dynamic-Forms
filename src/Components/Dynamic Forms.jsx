@@ -1,5 +1,5 @@
 import { useFormik } from "formik";
-import RenderCustomField from "./RenderCustomField";
+import RenderCustomFormField from "./RenderCustomFormField";
 
 const DynamicForms = ({data}) =>{
     
@@ -29,7 +29,7 @@ const DynamicForms = ({data}) =>{
                 <div id={form.sectionTitle}>
                 <h2>{form.sectionTitle}</h2>
                 <form onSubmit={handleSubmit}>
-                    <RenderCustomField fields={form.fields} getFieldProps={getFieldProps} errors={errors} />
+                    <RenderCustomFormField fields={form.fields} getFieldProps={getFieldProps} errors={errors} />
                     <button type="submit">Submit</button>
                 </form>
                 </div>

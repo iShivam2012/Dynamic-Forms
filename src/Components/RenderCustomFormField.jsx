@@ -1,6 +1,6 @@
-const RenderCustomField = ({fields, getFieldProps, errors}) =>{
+const RenderCustomFormField = ({fields, getFieldProps, errors}) =>{
     
-    const customField = ({type, name, label, placeholder, options}) =>{
+    const customFormField = ({type, name, label, placeholder, options}) =>{
         if(type === 'select'){
             return <>
             <label htmlFor={name} >{label}</label> 
@@ -41,7 +41,7 @@ const RenderCustomField = ({fields, getFieldProps, errors}) =>{
         {fields.map((field)=>{
             return(
                 <>
-                    {customField(field)}   
+                    {customFormField(field)}   
                 </>
             )
         })}
@@ -49,4 +49,4 @@ const RenderCustomField = ({fields, getFieldProps, errors}) =>{
     )
 }
 
-export default RenderCustomField
+export default RenderCustomFormField
