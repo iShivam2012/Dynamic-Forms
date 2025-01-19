@@ -162,27 +162,27 @@
         "children": [
           {
             "fields": [
-                {
-                    "name": "fname",
-                    "label": "Full Name",
-                    "type": "text",
-                    "required": true,
-                    "placeholder": "Enter your Full Name"
-                  },
-                  {
-                    "name": "emailId",
-                    "label": "Email Address",
-                    "type": "email",
-                    "required": true,
-                    "placeholder": "Enter your email id"
-                  },
-                  {
-                    "name": "pass",
-                    "label": "Password",
-                    "type": "password",
-                    "required": true,
-                    "placeholder": "Enter your password"
-                  }
+              {
+                "name": "fname",
+                "label": "Full Name",
+                "type": "text",
+                "required": true,
+                "placeholder": "Enter your Full Name"
+              },
+              {
+                "name": "emailId",
+                "label": "Email Address",
+                "type": "email",
+                "required": true,
+                "placeholder": "Enter your email id"
+              },
+              {
+                "name": "pass",
+                "label": "Password",
+                "type": "password",
+                "required": true,
+                "placeholder": "Enter your password"
+              }
             ]
           }
         ]
@@ -195,13 +195,13 @@
         "children": [
           {
             "fields": [
-                {
-                    "name": "nick name",
-                    "label": "Nick Name",
-                    "type": "text",
-                    "required": true,
-                    "placeholder": "Enter your Nick name"
-                  }
+              {
+                "name": "nick name",
+                "label": "Nick Name",
+                "type": "text",
+                "required": true,
+                "placeholder": "Enter your Nick name"
+              }
             ]
           }
         ]
