@@ -149,6 +149,62 @@
             ]
           }
         ]
+      },
+      {
+        "name": "signedup",
+        "label": "Already Signedup?",
+        "type": "radio",
+        "options": [
+          { "label": "Yes", "name": "signedup", "value": "yes" },
+          { "label": "No", "name": "signedup", "value": "no" }
+        ],
+        "required": true,
+        "children": [
+          {
+            "fields": [
+                {
+                    "name": "fname",
+                    "label": "Full Name",
+                    "type": "text",
+                    "required": true,
+                    "placeholder": "Enter your Full Name"
+                  },
+                  {
+                    "name": "emailId",
+                    "label": "Email Address",
+                    "type": "email",
+                    "required": true,
+                    "placeholder": "Enter your email id"
+                  },
+                  {
+                    "name": "pass",
+                    "label": "Password",
+                    "type": "password",
+                    "required": true,
+                    "placeholder": "Enter your password"
+                  }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "sign",
+        "label": "Sign below",
+        "type": "checkbox",
+        "required": true,
+        "children": [
+          {
+            "fields": [
+                {
+                    "name": "nick name",
+                    "label": "Nick Name",
+                    "type": "text",
+                    "required": true,
+                    "placeholder": "Enter your Nick name"
+                  }
+            ]
+          }
+        ]
       }
     ]
   }

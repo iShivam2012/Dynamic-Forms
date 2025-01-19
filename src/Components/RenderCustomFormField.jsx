@@ -27,12 +27,14 @@ const RenderCustomFormField = ({fields, getFieldProps, errors, values}) =>{
                 <label htmlFor={option.name} >{option.label}</label>
                 </>
             })}
+            {values[name]=== options[1].value && children && children.map((form)=> form.fields.map((field)=>customFormField(field))) }
             </>
         }
         else{
             return <>
             <label htmlFor={name} >{label}</label> 
             <input type={type} {...getFieldProps(name)} name={name} id={name} placeholder={placeholder} /> 
+            {type=== 'checkbox' && values[name] && children && children.map((form)=> form.fields.map((field)=>customFormField(field))) }
             </>
         }
     }
