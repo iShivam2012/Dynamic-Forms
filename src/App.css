@@ -54,4 +54,10 @@ body{
       min-width: 300px;
   }
 
+  .radioBtn{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap:10px;
+  }
 }
