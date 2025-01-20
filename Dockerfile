@@ -4,6 +4,7 @@ RUN useradd -u 10001 nonroot
 
 RUN mkdir /home/nonroot
 WORKDIR /home/nonroot
+RUN apt update -y
 
 COPY package*.json ./
 RUN npm install
@@ -13,7 +14,6 @@ COPY . .
 RUN chown -R nonroot:nonroot /home/nonroot
 
 USER 10001
-RUN apt update -y
 RUN npm run build
 RUN ls
 
