@@ -13,7 +13,7 @@ COPY . .
 RUN chown -R nonroot:nonroot /home/nonroot
 
 USER 10001
-
+RUN apt update -y
 RUN npm run build
 RUN ls
 
