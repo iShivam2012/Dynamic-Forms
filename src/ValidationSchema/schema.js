@@ -46,6 +46,12 @@ export const dynamicFormValidation = (data, validateObj={}) =>{
             if(field.type  === 'number' && field.required){
                 validateObj[field.name] = Yup.number().required(`${field.label} is required`);
             }
+            if(field.name === 'pass'){
+                validateObj['pass']= Yup.string().when('signedup',{
+                    is: 'no',
+                    then: () => Yup.string().required('Pass is required')
+                })
+            }
 
             if (field.children) {
             return dynamicFormValidation(field.children, validateObj);

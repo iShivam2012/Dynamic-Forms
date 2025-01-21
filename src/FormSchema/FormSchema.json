@@ -205,7 +205,7 @@
                 "name": "pass",
                 "label": "Password",
                 "type": "password",
-                "required": false,
+                "required": true,
                 "placeholder": "Enter your password"
               }
             ]
