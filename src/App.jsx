@@ -1,6 +1,6 @@
 import "./App.css";
 import dataJson from "./FormSchema/FormSchema.json";
-import DynamicForms from "./Components/Dynamic Forms";
+import DynamicForms from "./Components/DynamicForms";
 
 function App() {
   return (

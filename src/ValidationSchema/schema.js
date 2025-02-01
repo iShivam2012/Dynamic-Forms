@@ -58,5 +58,6 @@ export const dynamicFormValidation = (data, validateObj={}) =>{
           }
         });
       });
+      
     return validateObj;
 }

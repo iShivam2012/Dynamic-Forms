@@ -15,6 +15,13 @@ body{
   flex-direction: column;
 }
 
+/* .wrap{
+  display:flex;
+  flex-wrap: wrap;
+  width:600px;
+  gap:20px;
+} */
+
 .form-title{
   font-size: 26px;
   font-weight: 600;
